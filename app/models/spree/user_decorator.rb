@@ -8,10 +8,12 @@ module Spree
 
     def sync_mailchimp_preferences
       if mailchimp_list
-        if mailchimp_opt_in && (new_record? || mailchimp_opt_in_changed?)
-          mailchimp_list.subscribe(self)
-        elsif mailchimp_opt_in
-          mailchimp_list.update(self)
+        if mailchimp_opt_in
+          if new_record? || mailchimp_opt_in_changed?
+            mailchimp_list.subscribe(self)
+          else
+            mailchimp_list.update(self)
+          end
         elsif !mailchimp_opt_in && !new_record? && mailchimp_opt_in_changed?
           mailchimp_list.unsubscribe(self)
         end
