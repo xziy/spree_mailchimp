@@ -1,0 +1,8 @@
+<!-- insert_bottom '[data-hook="signup_below_password_fields"]' -->
+<% if Spree::Config[:mailchimp_checkbox_during_registration] %>
+  <div class="checkbox">
+    <label>
+      <%= f.check_box :mailchimp_opt_in %> <%= Spree.t(:opt_in, scope: :mailchimp) %>
+    </label>
+  </div>
+<% end %>

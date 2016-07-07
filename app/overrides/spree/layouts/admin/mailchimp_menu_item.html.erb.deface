@@ -1,3 +1,4 @@
+<!-- insert_bottom '#main-sidebar' -->
 <% if can? :admin, current_store %>
   <ul class="nav nav-sidebar">
     <%= tab Spree.t(:mailchimp, scope: :mailchimp), icon: "envelope", url: spree.admin_edit_mailchimp_url %>
