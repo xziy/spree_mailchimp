@@ -6,4 +6,5 @@ en:
       successfully_updated: Mailchimp configuration successfully updated
       display_checkbox_during_registration: Display opt-in check box on registration page?
       user_must_opt_in: User must opt-in rather than opt-out?
+      opt_in: Join our mailing list?
 
